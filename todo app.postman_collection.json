@@ -1,0 +1,406 @@
+{
+	"info": {
+		"_postman_id": "502a716a-c58f-41c0-99c1-6402935b8b7b",
+		"name": "todo app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32067612",
+		"_collection_link": "https://solar-shuttle-557675.postman.co/workspace/d6496ad4-83d4-49f6-b3d8-3e2c9b4e4b71/collection/32067612-502a716a-c58f-41c0-99c1-6402935b8b7b?action=share&source=collection_link&creator=32067612"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/api/tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks"
+					]
+				},
+				"description": "GET ALL TASKS"
+			},
+			"response": [
+				{
+					"name": "http://localhost:5000/api/tasks",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1300"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"514-2Nd+ByfRUpY82Qwi3tMT+n9w1sI\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Aug 2024 13:05:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"66b6ed0a34e22cdd86094e06\",\n        \"title\": \"Finish Project Report\",\n        \"description\": \"Complete the final report by EOD\",\n        \"completed\": true,\n        \"assignedTo\": \"vedant\",\n        \"status\": \"Completed\",\n        \"dueDate\": \"2024-08-12T00:00:00.000Z\",\n        \"priority\": \"High\",\n        \"comment\": \"Data section has been reviewed\",\n        \"createdAt\": \"2024-08-10T04:31:06.826Z\",\n        \"updatedAt\": \"2024-08-12T12:57:30.028Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66b84dc059883dd1cab646c2\",\n        \"title\": \"Stocks Analysis\",\n        \"description\": \"support and resistance to be find out\",\n        \"completed\": false,\n        \"assignedTo\": \"Pritesh\",\n        \"status\": \"Pending\",\n        \"dueDate\": \"2024-08-22T00:00:00.000Z\",\n        \"priority\": \"Low\",\n        \"comment\": \"do research \",\n        \"createdAt\": \"2024-08-11T05:36:00.579Z\",\n        \"updatedAt\": \"2024-08-11T12:47:43.238Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66b85f0c59883dd1cab646ee\",\n        \"title\": \"Gym\",\n        \"description\": \"exercise\",\n        \"completed\": false,\n        \"assignedTo\": \"Shivam\",\n        \"status\": \"Pending\",\n        \"dueDate\": \"2024-08-15T00:00:00.000Z\",\n        \"priority\": \"Medium\",\n        \"comment\": \"do \",\n        \"createdAt\": \"2024-08-11T06:49:48.701Z\",\n        \"updatedAt\": \"2024-08-11T07:46:55.059Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66b86dcaa9e832c40da88a39\",\n        \"title\": \"Cooking\",\n        \"description\": \"for Lunch\",\n        \"completed\": false,\n        \"assignedTo\": \"Pushpak\",\n        \"status\": \"Pending\",\n        \"dueDate\": \"2024-08-11T00:00:00.000Z\",\n        \"priority\": \"High\",\n        \"comment\": \"Dal Khichadi\\n\",\n        \"createdAt\": \"2024-08-11T07:52:42.492Z\",\n        \"updatedAt\": \"2024-08-11T07:58:02.105Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:5000/api/task/66b6ed0a34e22cdd86094e06",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"_id\": \"66b6ed0a34e22cdd86094e06\",\r\n        \"title\": \"Finish Project Report 2\",\r\n        \"description\": \"Complete the final report by EOD\",\r\n        \"completed\": true,\r\n        \"assignedTo\": \"Rajdeep\",\r\n        \"status\": \"Completed\",\r\n        \"dueDate\": \"2024-08-12T00:00:00.000Z\",\r\n        \"priority\": \"High\",\r\n        \"comment\": \"Data section has been reviewed\",\r\n        \"createdAt\": \"2024-08-10T04:31:06.826Z\",\r\n        \"updatedAt\": \"2024-08-11T07:58:29.778Z\",\r\n        \"__v\": 0\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/task/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"task",
+						""
+					]
+				},
+				"description": "EDIT TASK BY ID"
+			},
+			"response": [
+				{
+					"name": "http://localhost:5000/api/task/66b6ed0a34e22cdd86094e06",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"_id\": \"66b6ed0a34e22cdd86094e06\",\r\n        \"title\": \"Finish Project Report 2\",\r\n        \"description\": \"Complete the final report by EOD\",\r\n        \"completed\": true,\r\n        \"assignedTo\": \"Rajdeep\",\r\n        \"status\": \"Completed\",\r\n        \"dueDate\": \"2024-08-12T00:00:00.000Z\",\r\n        \"priority\": \"High\",\r\n        \"comment\": \"Data section has been reviewed\",\r\n        \"createdAt\": \"2024-08-10T04:31:06.826Z\",\r\n        \"updatedAt\": \"2024-08-11T07:58:29.778Z\",\r\n        \"__v\": 0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/task/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"task",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "362"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"16a-EIwCqTbt0KpdX+tGhcfAvbe0SXU\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Aug 2024 13:10:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"Finish Project Report 2\",\n    \"description\": \"Complete the final report by EOD\",\n    \"completed\": true,\n    \"assignedTo\": \"Rajdeep\",\n    \"status\": \"Completed\",\n    \"dueDate\": \"2024-08-12T00:00:00.000Z\",\n    \"priority\": \"High\",\n    \"comment\": \"Data section has been reviewed\",\n    \"_id\": \"66ba09dfc7612c92210df93b\",\n    \"createdAt\": \"2024-08-12T13:10:55.516Z\",\n    \"updatedAt\": \"2024-08-12T13:10:55.516Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:5000/api/task/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"_id\": \"66b6ed0a34e22cdd86094e06\",\r\n        \"title\": \"Finish Project Report 2\",\r\n        \"description\": \"Complete the final report by EOD\",\r\n        \"completed\": true,\r\n        \"assignedTo\": \"Rajdeep\",\r\n        \"status\": \"Completed\",\r\n        \"dueDate\": \"2024-08-12T00:00:00.000Z\",\r\n        \"priority\": \"High\",\r\n        \"comment\": \"Data section has been reviewed\",\r\n        \"createdAt\": \"2024-08-10T04:31:06.826Z\",\r\n        \"updatedAt\": \"2024-08-11T07:58:29.778Z\",\r\n        \"__v\": 0\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/task/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"task",
+						""
+					]
+				},
+				"description": "CREATE TASK"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/task/66ba09dfc7612c92210df93b",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/task/66ba09dfc7612c92210df93b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"task",
+						"66ba09dfc7612c92210df93b"
+					]
+				},
+				"description": "DELETE TASK BY ID"
+			},
+			"response": [
+				{
+					"name": "http://localhost:5000/api/task/66ba09dfc7612c92210df93b",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/task/66b6ed0a34e22cdd86094e06",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"task",
+								"66b6ed0a34e22cdd86094e06"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a-EXuvryuVXWlMt0iHutTdXWDMZ38\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Aug 2024 13:18:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Task deleted\"\n}"
+				},
+				{
+					"name": "http://localhost:5000/api/task/66ba09dfc7612c92210df93b",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/task/66b6ed0a34e22cdd86094e06",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"task",
+								"66b6ed0a34e22cdd86094e06"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a-EXuvryuVXWlMt0iHutTdXWDMZ38\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Aug 2024 13:18:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Task deleted\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:5000/api/tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks"
+					]
+				},
+				"description": "GET ALL"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/task/66ba0be5c7612c92210df949",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/task/66ba0be5c7612c92210df949",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"task",
+						"66ba0be5c7612c92210df949"
+					]
+				},
+				"description": "DELETE BY ID"
+			},
+			"response": []
+		}
+	]
+}
